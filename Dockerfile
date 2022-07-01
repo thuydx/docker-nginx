@@ -42,3 +42,14 @@ EXPOSE 9000 6379 80
 
 # commands
 CMD ["supervisord", "-n", "-j", "/supervisord.pid", "-c", "/etc/supervisor/supervisord.conf"]
+
+# Print tool versions
+RUN bash --version | head -n 1
+RUN dpkg -s dash | grep ^Version | awk '{print $2}'
+RUN git --version
+RUN curl --version
+RUN bash -i -c 'nvm -v'
+RUN bash -i -c 'node --version'
+RUN bash -i -c 'npm --version'
+RUN php -v
+RUN composer --version
