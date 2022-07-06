@@ -38,8 +38,7 @@ COPY ./supervisor/conf.d/ /etc/supervisor/conf.d/
 RUN mkdir -p /var/run/redis
 RUN chmod +x /var/run/redis/
 # ports php redis mysql nginx
-EXPOSE 9000 6379 80
-
+EXPOSE 9000 9003 6379 80
 # commands
 CMD ["supervisord", "-n", "-j", "/supervisord.pid", "-c", "/etc/supervisor/supervisord.conf"]
 
