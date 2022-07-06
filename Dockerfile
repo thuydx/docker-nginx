@@ -38,10 +38,10 @@ COPY ./supervisor/conf.d/ /etc/supervisor/conf.d/
 RUN mkdir -p /var/run/redis
 RUN chmod +x /var/run/redis/
 # ports php redis mysql nginx
-EXPOSE 9000 9003 6379 80
+EXPOSE 9000 9003 6379 80 22
 # commands
 CMD ["supervisord", "-n", "-j", "/supervisord.pid", "-c", "/etc/supervisor/supervisord.conf"]
-
+CMD ["/usr/sbin/sshd", "-D"]
 # Print tool versions
 RUN bash --version | head -n 1
 RUN dpkg -s dash | grep ^Version | awk '{print $2}'
