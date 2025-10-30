@@ -1,7 +1,8 @@
-FROM thuydx/phpfpm:8.1
+FROM thuydx/phpfpm:8.4
 
-MAINTAINER Thuy Dinh <thuydx@zendgroup.vn>
-LABEL Author="Thuy Dinh" Description="A comprehensive docker image to build nginx"
+LABEL maintainer="Thuy Dinh <thuydx@zendgroup.vn>" \
+      author="Thuy Dinh" \
+      description="A comprehensive docker image to build nginx"
 
 # Stop dpkg-reconfigure tzdata from prompting for input
 ENV DATE_TIMEZONE=UTC \
