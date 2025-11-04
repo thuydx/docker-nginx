@@ -30,7 +30,7 @@ COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
 
 # redis
-#COPY ./redis/redis.conf /etc/redis/redis.conf
+COPY ./redis/redis.conf /etc/redis/redis.conf
 
 # supervisor service config
 COPY ./supervisor/supervisord.conf /etc/supervisor/supervisord.conf
