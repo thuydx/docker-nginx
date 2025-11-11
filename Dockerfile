@@ -15,10 +15,13 @@ WORKDIR /var/www
 
 # Install dependencies
 RUN add-apt-repository ppa:redislabs/redis -y
-RUN apt-get update && apt-get install -y \
-    nginx \
+RUN apt-get update && apt-get install -y nginx \
     redis \
     memcached \
+    curl \
+    git \
+    vim \
+    unzip \
     supervisor
 
 #  # cleanup
