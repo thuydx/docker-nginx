@@ -39,8 +39,13 @@ COPY ./redis/redis.conf /etc/redis/redis.conf
 COPY ./supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 COPY ./supervisor/conf.d/ /etc/supervisor/conf.d/
 
-RUN mkdir -p /var/run/redis
-RUN chmod +x /var/run/redis/
+RUN mkdir -p /var/lib/redis && \
+    chown -R redis:redis /var/lib/redis && \
+    chmod 770 /var/lib/redis
+
+RUN mkdir -p /var/run/redis &&  \
+    chown -R redis:redis /var/run/redis && \
+    chmod +x /var/run/redis/
 # ports redis nginx memcached
 EXPOSE 6379 80 11211
 # commands
