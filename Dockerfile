@@ -55,3 +55,10 @@ RUN bash -i -c 'node --version'
 RUN bash -i -c 'npm --version'
 RUN php -v
 RUN composer --version
+
+COPY ./docker-entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# set entrypoint so template is rendered before CMD runs
+ENTRYPOINT ["/entrypoint.sh"]
+# keep the existing CMD (supervisord)
