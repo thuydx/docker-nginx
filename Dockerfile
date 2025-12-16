@@ -1,4 +1,4 @@
-FROM thuydx/phpfpm:8.4
+FROM thuydx/phpfpm:8.5
 
 LABEL maintainer="Thuy Dinh <thuydx@zendgroup.vn>" \
       author="Thuy Dinh" \
