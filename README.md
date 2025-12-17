@@ -5,7 +5,7 @@
 Name          | Version | Port
 --------------|---------|------
 nginx         | 1.18.0  | 80
-PHP8.4        | 8.4.2   | 9000
+PHP8.5        | 8.5.0   | 9000
 redis         | 5.0.11  | 6379
 
 ## Usage
@@ -54,7 +54,7 @@ Either your app has `public/` folder or not, the rewrite adapts automatically.
 
 ### PHP Ext
 ```
-PHP: 8.4
+PHP: 8.5
 Total: 73
 - apcu              - ast               - bcmath            - bz2
 - calendar          - core              - ctype             - curl
