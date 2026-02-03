@@ -1,4 +1,5 @@
-FROM thuydx/phpfpm:8.5
+FROM nginx:1.29.4 AS nginx
+FROM thuydx/phpfpm:8.5.2
 
 LABEL maintainer="Thuy Dinh <thuydx@zendgroup.vn>" \
       author="Thuy Dinh" \
